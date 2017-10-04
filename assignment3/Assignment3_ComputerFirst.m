@@ -4,7 +4,7 @@
 
 % X=-1
 % O=0
-% 1=10, 2= 0, 3=30, 4=40, 5=50, 6=60, 7=70, 8=80, 9=90
+% 1=10, 2=20, 3=30, 4=40, 5=50, 6=60, 7=70, 8=80, 9=90
 % Failure to chose an available space results in loss of turn
 ticTacToe = [10,40,70;20,50,80;30,60,90] % Displays Game Board
 % Randomize Computer Move (Ensures availability of move)
