@@ -3,7 +3,7 @@
 % Assignment 4 Tic Tac 
 
 % ******GAME RULES******
-%    X=-1 & O=0, 1=Yes & 2=No
+%    1=Yes & 2=No, X=-1 & O=0
 %    Failure to chose an available space results in loss of turn
 
 % WELCOME MESSAGE
@@ -15,7 +15,7 @@ while (want2play > '0')
     % 1 PLAYER GAME
     if (playerNumber == '1')
         computerLevel = input('Choose difficulty (1=Beginner, 2=Moderate, 3=Expert):','s');
-        if (computerLevel == '1') %BEGINNER
+        if (computerLevel == '1') % BEGINNER LEVEL
             while (want2play > '0')
             % DISPLAY GAME BOARD
                 ticTacToe = [1,4,7;2,5,8;3,6,9]
@@ -243,7 +243,7 @@ while (want2play > '0')
             % PROMPT TO PLAY AGAIN (1 = Yes ; 2 = No)
                 want2play = input('Do you want to play again? (type "1" for yes or "0" for no):','s');
             end            
-        elseif (computerLevel == '2')
+        elseif (computerLevel == '2') % MODERATE LEVEL
             while (want2play > '0')
             % DISPLAY GAME BOARD
                 ticTacToe = [1,4,7;2,5,8;3,6,9]
@@ -447,7 +447,7 @@ while (want2play > '0')
             % PROMPT TO PLAY AGAIN (1 = Yes ; 2 = No)
                 want2play = input('Do you want to play again? (type "1" for yes or "0" for no):','s');
             end
-        elseif (computerLevel == '3')
+        elseif (computerLevel == '3') % EXPERT LEVEL (Picking unavailable move results in loss)
             while (want2play > '0')
             % DISPLAY GAME BOARD
                 ticTacToe = [1,4,7;2,5,8;3,6,9]
@@ -460,73 +460,27 @@ while (want2play > '0')
                 % MOVE 2
                     move = input('ENTER MOVE:','s');
                     if (move == '1')
-                        if (ticTacToe(1,1) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,1) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,1) == 1)
-                            ticTacToe(1,1) = -1
-                        end
+                        ticTacToe(1,1) = -1
                     elseif (move == '2')
-                        if (ticTacToe(2,1) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(2,1) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(2,1) == 2)
-                            ticTacToe(2,1) = -1
-                        end
+                        ticTacToe(2,1) = -1
                     elseif (move == '3')
-                        if (ticTacToe(3,1) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,1) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,1) == 3)
-                            ticTacToe(3,1) = -1
-                        end
+                        ticTacToe(3,1) = -1
                     elseif (move == '4')
-                        if (ticTacToe(1,2) == -10)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,2) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,2) == 4)
-                            ticTacToe(1,2) = -1
-                        end
+                        ticTacToe(1,2) = -1
                     elseif (move == '5')
-                        disp('Invalid Move, Lose Turn')
+                        disp('Invalid Move')
+                        disp('COMPUTER WINS!')
                     elseif (move == '6')
-                        if (ticTacToe(3,2) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,2) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,2) == 6)
-                            ticTacToe(3,2) = -1
-                        end
+                        ticTacToe(3,2) = -1
                     elseif (move == '7')
-                        if (ticTacToe(1,3) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,3) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(1,3) == 7)
-                            ticTacToe(1,3) = -1
-                        end
+                        ticTacToe(1,3) = -1
                     elseif (move == '8')
-                        if (ticTacToe(2,3) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(2,3) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(2,3) == 8)
-                            ticTacToe(2,3) = -1
-                        end
+                        ticTacToe(2,3) = -1
                     elseif (move == '9')
-                        if (ticTacToe(3,3) == -1)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,3) == 0)
-                            disp('Invalid Move, Lose Turn')
-                        elseif (ticTacToe(3,3) == 9)
-                            ticTacToe(3,3) = -1
-                        end
+                        ticTacToe(3,3) = -1
                     else
-                        disp('Invalid Move, Lose Turn')
+                        disp('Invalid Move')
+                        disp('COMPUTER WINS!')
                     end
                     pause(1)
                 % MOVE 3
