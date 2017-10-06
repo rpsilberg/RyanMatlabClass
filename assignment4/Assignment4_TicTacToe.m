@@ -40,6 +40,8 @@ while (want2play > '0')
                     ticTacToe(2,3) = -1
                 elseif (move == '9')
                     ticTacToe(3,3) = -1
+                else
+                    disp('Invalid Move, Lose Turn')
                 end
                 pause(1)
                 for i = 1:4 % Loop for moves two through nine or until winner decided
@@ -2494,6 +2496,8 @@ while (want2play > '0')
                 ticTacToe(2,3) = -1
             elseif (move == '9')
                 ticTacToe(3,3) = -1
+            else
+                disp('Invalid Move, Lose Turn')
             end
             pause(1)
             for i = 1:4 % Loop for moves two through nine or until winner decided
