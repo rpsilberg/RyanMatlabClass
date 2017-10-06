@@ -3,12 +3,17 @@
 % Assignment 4 Tic Tac 
 
 % ******GAME RULES******
-%    1=Yes & 2=No, X=-1 & O=0
-%    Failure to chose an available space results in loss of turn
+%    Input numbers (>=0) only, no letters 
+%    1=Yes & 2=No
+%       NaN inputs result in "Yes" 
+%       Negative inputs result in "No"
+%    Chose move by inputting the number of the space (ex: space 5 = 5)
+%       Failure to chose an available space results in loss of turn
+%    X=-1 & O=0 (shown on board)
 
 % WELCOME MESSAGE
 disp('WELCOME TO TIC TAC TOE')
-% PROMPT TO PLAY (1 = Yes ; 2 = No)
+% PROMPT TO PLAY (1 = Yes ; 0 = No)
 want2play = input('Do you want to play a game? (type "1" for yes or "0" for no):','s');
 while (want2play > '0')
     playerNumber = input('How many players? (1 or 2):','s');
