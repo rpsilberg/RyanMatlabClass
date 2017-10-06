@@ -14,7 +14,7 @@ while (want2play > '0')
     playerNumber = input('How many players? (1 or 2):','s');
     % 1 PLAYER GAME
     if (playerNumber == '1')
-        computerLevel = input('Choose difficulty (1=Beginner, 2=Moderate, 3=Expert):','s')
+        computerLevel = input('Choose difficulty (1=Beginner, 2=Moderate, 3=Expert):','s');
         if (computerLevel == '1') %BEGINNER
             while (want2play > '0')
             % DISPLAY GAME BOARD
@@ -2511,6 +2511,8 @@ while (want2play > '0')
             % PROMPT TO PLAY AGAIN (1 = Yes ; 2 = No)
                 want2play = input('Do you want to play again? (type "1" for yes or "0" for no):','s');
             end
+        else
+            disp('Invalid, Try Again')
         end
     end
     % 2 PLAYER GAME
