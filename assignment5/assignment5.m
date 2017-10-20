@@ -36,8 +36,9 @@ day2toDay3 = [day2toDay3; zeros(maxVariableLength-length(day2toDay3),1)];
 normDay1mean = [normDay1mean; zeros(maxVariableLength-length(normDay1mean),1)];
 normDay2mean = [normDay2mean; zeros(maxVariableLength-length(normDay2mean),1)];
 normDay3mean = [normDay3mean; zeros(maxVariableLength-length(normDay3mean),1)];
-% Create result matrix
+% Create results matrix
 iso_results = [maleIsoIndMeans,femaleIsoIndMeans,maleGroupIsoMean,femaleGroupIsoMean,day1toDay2,day2toDay3,normDay1mean,normDay2mean,normDay3mean];
+% Export results matrix to csv file
 csvwrite('iso_results.csv',iso_results);
 % csvwrite a matrix with a header found at: https://www.mathworks.com/matlabcentral/answers/259937-csvwrite-a-matrix-with-header
 variableNames = {'maleIsoIndMeans' 'femaleIsoIndMeans' 'maleGroupIsoMean' 'femaleGroupIsoMean' 'day1toDay2' 'day2toDay3' 'normDay1mean' 'normDay2mean' 'normDay3mean'}; % Header    
